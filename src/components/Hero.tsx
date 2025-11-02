@@ -1,17 +1,38 @@
 import { ArrowRight, TrendingUp, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-gold.jpg";
+import miningImage from "@/assets/mining-operations.jpg";
+import refineryImage from "@/assets/refinery.jpg";
+import consultationImage from "@/assets/consultation.jpg";
+import goldBarsImage from "@/assets/gold-bars.jpg";
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [heroImage, goldBarsImage, miningImage, refineryImage, consultationImage];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
+      {/* Background Image Carousel with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Premium gold investment"
-          className="w-full h-full object-cover"
-        />
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Premium gold investment ${index + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-dark-overlay"></div>
       </div>
 
