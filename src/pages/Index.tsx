@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import GoldPriceTicker from "@/components/GoldPriceTicker";
+import ServicesSlider from "@/components/ServicesSlider";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
@@ -16,6 +17,7 @@ const Index = () => {
       <Navbar />
       <GoldPriceTicker />
       <Hero />
+      <ServicesSlider />
       <About />
       <Services />
       <WhyUs />
