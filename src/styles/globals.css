@@ -1,0 +1,28 @@
+/* Add a friendly, readable font and small typographic tweaks */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --ui-font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html, body, #__next {
+  font-family: var(--ui-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Small, readable default sizes */
+body {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Make hero stats appear above white about sections if overlapped */
+.hero-stats, .hero {
+  position: relative;
+  z-index: 50;
+}
+
+/* Tweak headings to be less huge and friendlier */
+h1 { font-size: 1.75rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.25rem; letter-spacing: -0.005em; }
