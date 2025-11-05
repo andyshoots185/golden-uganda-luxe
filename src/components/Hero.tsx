@@ -1,7 +1,7 @@
 import { ArrowRight, TrendingUp, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import heroImgPath from "@/assets/hero-gold.svg";
+import heroImgPath from "@/assets/hero-gold.jpg";
 import miningImage from "@/assets/mining-operations.jpg";
 import refineryImage from "@/assets/refinery.jpg";
 import consultationImage from "@/assets/consultation.jpg";
