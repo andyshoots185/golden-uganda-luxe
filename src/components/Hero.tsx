@@ -1,7 +1,7 @@
 import { ArrowRight, TrendingUp, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import heroImage from "@/assets/hero-gold.jpg";
+import heroImgPath from "@/assets/hero-gold.svg";
 import miningImage from "@/assets/mining-operations.jpg";
 import refineryImage from "@/assets/refinery.jpg";
 import consultationImage from "@/assets/consultation.jpg";
@@ -9,7 +9,7 @@ import goldBarsImage from "@/assets/gold-bars.jpg";
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [heroImage, goldBarsImage, miningImage, refineryImage, consultationImage];
+  const images = [heroImgPath, goldBarsImage, miningImage, refineryImage, consultationImage];
 
   useEffect(() => {
     const interval = setInterval(() => {
