@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="space-y-3">
               <a href="tel:+256709948920" className="flex items-center space-x-3 text-primary-foreground/80 hover:text-gold transition-colors">
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+256 709 948920</span>
+                <span className="text-sm">0200930758</span>
               </a>
               <a href="mailto:info@hrhgoldinvest.com" className="flex items-center space-x-3 text-primary-foreground/80 hover:text-gold transition-colors">
                 <Mail className="w-4 h-4" />
